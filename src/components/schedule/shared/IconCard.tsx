@@ -1,4 +1,3 @@
-import { IconProps } from "lucide-react";
 
 interface IconCardProps {
   icon: string;
