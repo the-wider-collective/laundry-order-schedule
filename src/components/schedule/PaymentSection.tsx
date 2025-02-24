@@ -1,7 +1,15 @@
 
+import { useState } from "react";
 import { SectionTitle } from "./shared/SectionTitle";
+import { ConfirmationModal } from "./dialogs/ConfirmationModal";
 
 export const PaymentSection = () => {
+  const [isConfirmationOpen, setIsConfirmationOpen] = useState(false);
+
+  const handleConfirmPickup = () => {
+    setIsConfirmationOpen(true);
+  };
+
   return (
     <section className="relative">
       <SectionTitle>Payment Method</SectionTitle>
@@ -31,12 +39,21 @@ export const PaymentSection = () => {
       </div>
 
       <div className="relative z-10">
-        <button className="w-full text-[#92e3ed] text-center font-medium bg-white p-4 rounded-xl border-2 border-[#92e3ed]">
+        <button 
+          onClick={handleConfirmPickup}
+          className="w-full text-[#92e3ed] text-center font-medium bg-white p-4 rounded-xl border-2 border-[#92e3ed] hover:bg-[#f8fdfe] transition-colors"
+        >
           Confirm Pickup
         </button>
       </div>
 
       <div className="absolute bottom-0 left-0 right-0 h-40 bg-[#ffbf3d] rounded-t-[50%] -z-0 transform translate-y-1/2" />
+
+      <ConfirmationModal
+        isOpen={isConfirmationOpen}
+        onClose={() => setIsConfirmationOpen(false)}
+        orderNumber="123456"
+      />
     </section>
   );
 };
