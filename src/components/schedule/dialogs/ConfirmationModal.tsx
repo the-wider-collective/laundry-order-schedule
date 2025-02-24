@@ -2,6 +2,7 @@
 import {
   Dialog,
   DialogContent,
+  DialogTitle,
 } from "@/components/ui/dialog";
 
 interface ConfirmationModalProps {
@@ -19,16 +20,6 @@ export const ConfirmationModal: React.FC<ConfirmationModalProps> = ({
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-[425px] p-0 overflow-hidden bg-[#92e3ed] border-0">
         <div className="relative">
-          {/* Close button */}
-          <button 
-            onClick={onClose}
-            className="absolute right-4 top-4 text-white p-2 hover:opacity-80 transition-opacity"
-          >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </button>
-
           {/* Bubble pattern */}
           <div className="absolute inset-0 overflow-hidden">
             <div className="absolute -top-4 -left-4 w-24 h-24 rounded-full bg-[#83d2db] opacity-50" />
@@ -38,6 +29,7 @@ export const ConfirmationModal: React.FC<ConfirmationModalProps> = ({
 
           {/* Content */}
           <div className="px-8 pt-16 pb-8 text-center relative z-10">
+            <DialogTitle className="sr-only">Order Confirmation</DialogTitle>
             <div className="w-24 h-24 rounded-full bg-[#ffbf3d] mx-auto mb-6 overflow-hidden">
               <img
                 src="/lovable-uploads/f80607ca-1261-44f8-ae81-2dffd4f99949.png"
