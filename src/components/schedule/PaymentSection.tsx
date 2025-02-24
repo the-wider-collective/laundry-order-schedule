@@ -25,15 +25,15 @@ export const PaymentSection = () => {
 
       <div className="mb-6 space-y-3">
         <div className="flex items-center gap-3 text-[#666] text-sm">
-          <div className="w-5 h-5 rounded-full border-2 border-[#ddd]" />
+          <i className="ph-fill ph-check-circle text-lg text-[#ddd]" />
           <span>Reschedule or cancel anytime.</span>
         </div>
         <div className="flex items-center gap-3 text-[#666] text-sm">
-          <div className="w-5 h-5 rounded-full border-2 border-[#ddd]" />
+          <i className="ph-fill ph-check-circle text-lg text-[#ddd]" />
           <span>Satisfaction <span className="text-[#ffbf3d]">guaranteed</span>.</span>
         </div>
         <div className="flex items-center gap-3 text-[#666] text-sm">
-          <div className="w-5 h-5 rounded-full border-2 border-[#ddd]" />
+          <i className="ph-fill ph-check-circle text-lg text-[#ddd]" />
           <span>Have questions? <span className="text-[#92e3ed]">Contact us!</span></span>
         </div>
       </div>

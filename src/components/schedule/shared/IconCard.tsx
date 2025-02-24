@@ -51,7 +51,7 @@ export const IconCard: React.FC<IconCardProps> = ({
       </div>
       {action && (
         <div
-          className={`text-sm cursor-pointer transition-colors ${
+          className={`text-sm cursor-pointer transition-colors mr-4 ${
             action.text.toLowerCase() === "edit"
               ? "text-[#92e3ed] hover:text-[#83d2db]"
               : "text-[#ffbf3d] hover:text-[#e6ac37]"
