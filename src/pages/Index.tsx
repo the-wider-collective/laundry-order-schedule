@@ -12,7 +12,7 @@ const Index = () => {
         rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
       />
-      <div className="min-h-screen bg-gray-100 py-8">
+      <div className="min-h-screen bg-gray-100">
         <ScheduleLayout />
       </div>
     </>
