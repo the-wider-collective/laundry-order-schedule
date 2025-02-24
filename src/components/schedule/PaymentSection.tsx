@@ -1,8 +1,9 @@
+
 import { SectionTitle } from "./shared/SectionTitle";
 
 export const PaymentSection = () => {
   return (
-    <section>
+    <section className="relative">
       <SectionTitle>Payment Method</SectionTitle>
 
       <div className="text-[#666] text-sm mb-4">
@@ -10,28 +11,32 @@ export const PaymentSection = () => {
         be charged after delivery.
       </div>
 
-      <button className="w-full text-white text-center bg-[#00bcd4] mb-6 p-4 rounded-lg max-sm:p-3.5">
+      <button className="w-full text-white text-center bg-[#92e3ed] mb-8 p-4 rounded-xl font-medium">
         Add payment method
       </button>
 
-      <div className="mb-6">
-        <div className="flex items-center gap-2 text-[#666] text-sm mb-2">
-          <i className="ti ti-calendar" />
+      <div className="mb-6 space-y-3">
+        <div className="flex items-center gap-3 text-[#666] text-sm">
+          <div className="w-5 h-5 rounded-full border-2 border-[#ddd]" />
           <span>Reschedule or cancel anytime.</span>
         </div>
-        <div className="flex items-center gap-2 text-[#666] text-sm mb-2">
-          <i className="ti ti-thumb-up" />
-          <span>Satisfaction guaranteed.</span>
+        <div className="flex items-center gap-3 text-[#666] text-sm">
+          <div className="w-5 h-5 rounded-full border-2 border-[#ddd]" />
+          <span>Satisfaction <span className="text-[#ffbf3d]">guaranteed</span>.</span>
         </div>
-        <div className="flex items-center gap-2 text-[#666] text-sm mb-2">
-          <i className="ti ti-help" />
-          <span>Have questions? Contact us!</span>
+        <div className="flex items-center gap-3 text-[#666] text-sm">
+          <div className="w-5 h-5 rounded-full border-2 border-[#ddd]" />
+          <span>Have questions? <span className="text-[#92e3ed]">Contact us!</span></span>
         </div>
       </div>
 
-      <button className="w-full text-white text-center font-medium bg-[#00bcd4] p-4 rounded-lg max-sm:p-3.5">
-        Confirm Pickup
-      </button>
+      <div className="relative z-10">
+        <button className="w-full text-[#92e3ed] text-center font-medium bg-white p-4 rounded-xl border-2 border-[#92e3ed]">
+          Confirm Pickup
+        </button>
+      </div>
+
+      <div className="absolute bottom-0 left-0 right-0 h-40 bg-[#ffbf3d] rounded-t-[50%] -z-0 transform translate-y-1/2" />
     </section>
   );
 };

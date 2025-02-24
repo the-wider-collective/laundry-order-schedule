@@ -1,3 +1,4 @@
+
 import { SectionTitle } from "./shared/SectionTitle";
 import { IconCard } from "./shared/IconCard";
 
@@ -14,17 +15,18 @@ export const PickupSection = () => {
       </div>
 
       <IconCard
-        icon="package"
+        icon="pickup"
         label="PICKUP"
         title="Tonight, Feb 8"
         action={{
           text: "Edit",
           onClick: () => console.log("Edit pickup"),
         }}
+        variant="primary"
       />
 
-      <div className="bg-[#f8f8f8] mb-6 p-4 rounded-lg">
-        <span>Not available in the evening?</span>
+      <div className="bg-[#f8f8f8] mb-6 p-4 rounded-xl">
+        <span className="font-medium text-[#333]">Not available in the evening?</span>
         <div className="text-[#666] text-sm mt-1">
           No worries! You can check the "Remote Pickup" Box in the checkout page
           to make this super easy.

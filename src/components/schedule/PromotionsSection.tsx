@@ -1,3 +1,4 @@
+
 import { SectionTitle } from "./shared/SectionTitle";
 
 export const PromotionsSection = () => {
@@ -5,11 +6,11 @@ export const PromotionsSection = () => {
     <section>
       <SectionTitle>Promotions</SectionTitle>
 
-      <div>
+      <div className="relative">
         <input
           type="text"
           placeholder="Apply coupon code"
-          className="w-full border border-neutral-200 mb-6 p-3 rounded-lg border-solid"
+          className="w-full border border-[#ffbf3d] mb-6 p-4 rounded-xl border-solid text-[#333] placeholder:text-[#999]"
         />
       </div>
     </section>

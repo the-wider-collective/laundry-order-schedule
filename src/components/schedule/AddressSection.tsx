@@ -1,3 +1,4 @@
+
 import { SectionTitle } from "./shared/SectionTitle";
 import { IconCard } from "./shared/IconCard";
 
@@ -7,7 +8,7 @@ export const AddressSection = () => {
       <SectionTitle>Pickup and Delivery Address</SectionTitle>
 
       <div className="mb-4">
-        <div>YOUR ADDRESS</div>
+        <div className="text-[#92e3ed] text-sm mb-2">YOUR ADDRESS</div>
         <IconCard
           icon="home"
           title="Home"
@@ -16,20 +17,22 @@ export const AddressSection = () => {
             text: "Edit",
             onClick: () => console.log("Edit home address"),
           }}
+          variant="primary"
         />
 
         <IconCard
-          icon="building"
+          icon="office"
           title="Office"
           selected={false}
           action={{
             text: "Edit",
             onClick: () => console.log("Edit office address"),
           }}
+          variant="primary"
         />
       </div>
 
-      <div className="text-[#00bcd4] mb-6 cursor-pointer">
+      <div className="text-[#92e3ed] text-sm mb-6 cursor-pointer">
         + Add new address
       </div>
     </section>
